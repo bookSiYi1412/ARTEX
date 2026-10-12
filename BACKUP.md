@@ -20,7 +20,7 @@
 
 - 完整保留备份时可读取的 Git 提交历史：所有公开 Git 引用可达的 **465 个提交**。
 - 保留上游 **1 个分支**和 **19 个标签**，标签名称、对象与注释不变；默认分支快照包含 **810 个文件**。
-- `main` 在上游快照上仅新增本备份声明、来源说明与备份清单；原有源码、资源文件、LICENSE 和上游文档正文均保留。
+- `main` 在上游快照上整合 README 的备份身份、来源和镜像归属说明，将安装示例的克隆地址改为本备份，并新增来源说明与备份清单。原有源码、资源文件和 LICENSE 均保留；未经修改的上游文档可在快照分支中查看。
 - 上游的 `refs/pull/4/head` 保存为 [`backup/pull/4`](https://github.com/bookSiYi1412/ARTEX/tree/backup/pull/4)，保留该 PR 的 Git 数据。原始引用及对应对象记录在 [`.backup/manifest.json`](.backup/manifest.json)。
 - 仓库公开元数据、Issue/PR 记录、Issue 评论和 PR 行内评论，以 GitHub API 原始 JSON 快照保存在 [`.backup/github/`](.backup/github/)。这些记录作为文件归档，不会以备份账号重新发布成 Issue 或 PR。
 - 检查时直接来源仓库没有 GitHub Release 或发布附件，且未启用 Wiki；源码中引用的外部 Docker 镜像、在线演示及其他仓库的发布包属于外部服务，不属于本 Git 仓库快照。

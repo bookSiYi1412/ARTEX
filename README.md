@@ -1,9 +1,3 @@
-> **独立备份声明**：本仓库由 [bookSiYi1412](https://github.com/bookSiYi1412) 作为个人独立备份维护，来源于 [mhtsec/ARTEX](https://github.com/mhtsec/ARTEX)。项目源码及其贡献归原作者和贡献者所有；备份者负责本仓库的保存与来源说明。
->
-> **备份日期**：2026-10-12；**源提交**：[`a9d11cb852ea`](https://github.com/mhtsec/ARTEX/commit/a9d11cb852eadad00669e4f6a05ee59cbbd14860)；**许可证**：[AGPL-3.0](LICENSE)。本仓库与上游独立维护，具体备份范围及原始快照见 [BACKUP.md](BACKUP.md)。
-
----
-
 <div align="center">
 
 # ARTEX
@@ -13,7 +7,11 @@ AI 自主渗透测试系统（Go 后端 + Next.js 前端）
 
 🌐 **在线 Demo（模拟数据）**： [https://artex-demo.mhtsec.com](https://artex-demo.mhtsec.com)
 
-📦 **该仓库为ARTEX最后一个版本纯源码备份。原 Docker 镜像源 `autumn27/artex` 已失效，现由本仓库自维护镜像 `mianhuatang11/artex`（Docker Hub）；拉取失败时可 `docker compose build` 从纯源码本地构建，无任何外部预编译依赖。**
+📦 **本仓库由 [bookSiYi1412](https://github.com/bookSiYi1412) 创建并维护，是 ARTEX 的个人独立备份，直接来源于 [mhtsec/ARTEX](https://github.com/mhtsec/ARTEX)。完整保留上游源码、提交历史和版本标签；项目源码及其贡献归原作者和贡献者所有。**
+
+**备份日期**：2026-10-12 · **源提交**：[`a9d11cb852ea`](https://github.com/mhtsec/ARTEX/commit/a9d11cb852eadad00669e4f6a05ee59cbbd14860) · **许可证**：[AGPL-3.0](LICENSE) · **来源与备份范围**：[BACKUP.md](BACKUP.md)
+
+按上游说明，原 Docker 镜像源 `autumn27/artex` 已失效；本备份沿用上游提供的镜像 `mianhuatang11/artex`（Docker Hub）。拉取失败时可 `docker compose build` 从纯源码本地构建，无任何外部预编译依赖。
 
 </div>
 
@@ -77,7 +75,7 @@ AI 自主渗透测试系统（Go 后端 + Next.js 前端）
 ### 方式一：一键安装脚本（推荐）
 
 ```bash
-git clone https://github.com/mhtsec/ARTEX.git
+git clone https://github.com/bookSiYi1412/ARTEX.git
 cd ARTEX
 ./install.sh
 ```
@@ -92,14 +90,14 @@ cd ARTEX
 ### 方式二：Docker Compose（手动）
 
 ```bash
-git clone https://github.com/mhtsec/ARTEX.git
+git clone https://github.com/bookSiYi1412/ARTEX.git
 cd ARTEX
 cp .env.example .env          # 填 POSTGRES_PASSWORD、可选 ANTHROPIC_API_KEY
 docker compose up -d          # 拉取 mianhuatang11/artex 镜像 + postgres
 # → http://localhost:8787
 ```
 
-> 原镜像源 `autumn27/artex` 已从 Docker Hub 删除，镜像现由本仓库自维护为 **`mianhuatang11/artex`**。
+> 按上游说明，原镜像源 `autumn27/artex` 已从 Docker Hub 删除；本备份沿用上游提供的镜像 **`mianhuatang11/artex`**。
 > 镜像源不可用（或想自行改代码）时，本地从纯源码构建即可：`docker compose build && docker compose up -d`。
 > Dockerfile 为多阶段构建（前端静态导出 → Go 静态编译 → 运行镜像），默认走国内友好依赖源，可加 `--build-arg GOPROXY=... / --build-arg NPM_REGISTRY=...` 覆盖。
 

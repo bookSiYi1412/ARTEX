@@ -119,7 +119,7 @@
   "source_releases": 0,
   "source_wiki_enabled": false,
   "backup_changes": [
-    "README.md: prepend independent-backup attribution",
+    "README.md: integrate independent-backup attribution, source details, upstream image attribution and backup clone URLs",
     "BACKUP.md: add provenance and backup scope",
     ".backup/: add source reference manifest and public metadata snapshots"
   ],
