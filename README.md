@@ -5,7 +5,7 @@
 AI 自主渗透测试系统（Go 后端 + Next.js 前端）
 
 
-🌐 **在线 Demo（模拟数据）**： [https://artex-demo.mhtsec.com](https://artex-demo.mhtsec.com)
+🌐 **独立在线 Demo（模拟数据）**： [https://bookSiYi1412.github.io/ARTEX/](https://bookSiYi1412.github.io/ARTEX/) · [演示分支与部署说明](DEMO.md)
 
 📦 **本仓库由 [bookSiYi1412](https://github.com/bookSiYi1412) 创建并维护，是 ARTEX 的个人独立备份，直接来源于 [mhtsec/ARTEX](https://github.com/mhtsec/ARTEX)。完整保留上游源码、提交历史和版本标签；项目源码及其贡献归原作者和贡献者所有。**
 
@@ -19,7 +19,7 @@ AI 自主渗透测试系统（Go 后端 + Next.js 前端）
 
 ## 截图预览
 
-> 完整交互见[在线 Demo](https://artex-demo.mhtsec.com)（纯前端 + Mock 数据，无需后端）。
+> 完整交互见[独立在线 Demo](https://bookSiYi1412.github.io/ARTEX/)（纯前端 + Mock 数据，无需后端）。
 
 | 仪表盘（总览 / Token 消耗 / 活动流） | 任务列表 |
 | :---: | :---: |
@@ -287,10 +287,10 @@ server {
 - 前端：`cd web && npm run dev`（`/api` 反代到后端，带热更新）
 - 测试：`go test ./...`
 - Mock 预览（无后端）：`cd web && NEXT_PUBLIC_MOCK=1 npm run dev`
-- 在线 Demo 重新部署（Cloudflare Pages，静态导出 + Mock 数据）：
+- 在线 Demo 重新部署（GitHub Pages，`demo` 分支静态导出 + Mock 数据，详见 [DEMO.md](DEMO.md)）：
   ```bash
-  cd web && NEXT_PUBLIC_MOCK=1 npm run build:static
-  CLOUDFLARE_API_TOKEN=<token> npx wrangler pages deploy out --project-name=artex-demo --branch=main
+  git switch demo
+  cd web && npm ci --ignore-scripts && npm run build:demo
   ```
 
 ---
