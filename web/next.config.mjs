@@ -5,9 +5,11 @@ import { fileURLToPath } from "node:url";
 const isExport = process.env.NEXT_EXPORT === "1";
 // Vercel demo：整站走 mock，无后端，无需 /api 反代。
 const isMock = process.env.NEXT_PUBLIC_MOCK === "1";
+const basePath = process.env.NEXT_PUBLIC_BASE_PATH ?? "";
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath,
   // 避免父目录的 lockfile 影响根目录推断及资源路径生成。
   turbopack: { root: fileURLToPath(new URL(".", import.meta.url)) },
   reactCompiler: true,

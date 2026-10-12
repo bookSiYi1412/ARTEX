@@ -5,6 +5,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { toast } from "sonner";
 
 import { sseUrl } from "@/lib/api";
+import { MOCK } from "@/lib/mock/enabled";
 import { isBtwCommand, type SideExchange, type SideHistory, sideAPI } from "@/lib/side-questions";
 
 // crypto.randomUUID 仅在安全上下文可用(https/localhost);经 IP+http 访问时降级。
@@ -126,7 +127,7 @@ export function useSideQuestions(parent: string | null) {
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: Reconnect after a clear attempt invalidates older callbacks.
   useEffect(() => {
-    if (!runningID) return;
+    if (MOCK || !runningID) return;
     const version = epoch.current;
     const stream = new EventSource(sseUrl(`/api/side-questions/${runningID}/events`));
     stream.addEventListener("snapshot", (event) => {

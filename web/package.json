@@ -6,6 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "build:static": "NEXT_EXPORT=1 next build",
+    "build:demo": "NEXT_PUBLIC_MOCK=1 NEXT_PUBLIC_BASE_PATH=/ARTEX NEXT_EXPORT=1 next build --webpack",
     "start": "next start",
     "lint": "biome lint",
     "format": "biome format --write",

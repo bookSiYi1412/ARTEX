@@ -5,6 +5,7 @@
 
 import type { ChatMention } from "@/lib/chat-mentions";
 import { MOCK } from "@/lib/mock/enabled";
+import { withBasePath } from "@/lib/base-path";
 import { mockHandle } from "@/lib/mock/handler";
 import type {
   ActiveFindingRetest,
@@ -126,7 +127,7 @@ export async function http<T>(path: string, init?: RequestInit): Promise<T> {
     if (typeof window !== "undefined") {
       localStorage.removeItem("artex_token");
       document.cookie = "artex_token=; path=/; max-age=0";
-      window.location.href = "/login";
+      window.location.href = withBasePath("/login/");
     }
     throw new Error("未授权");
   }
@@ -564,6 +565,7 @@ export const api = {
     filters?: Omit<FindingQuery, "page" | "pageSize">;
     ids?: string[];
   }) => {
+    if (MOCK) throw new Error("在线演示暂不提供文件导出。");
     const p = new URLSearchParams({ format: opts.format, scope: opts.scope });
     if (opts.scope === "selected") {
       p.set("ids", (opts.ids ?? []).join(","));

@@ -6,7 +6,9 @@ import * as React from "react";
 import { AppSidebar } from "@/app/(main)/_components/sidebar/app-sidebar";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { auth } from "@/lib/auth";
+import { withBasePath } from "@/lib/base-path";
 import { getClientCookie } from "@/lib/cookie.client";
+import { MOCK } from "@/lib/mock/enabled";
 import {
   SIDEBAR_COLLAPSIBLE_VALUES,
   SIDEBAR_VARIANT_VALUES,
@@ -41,7 +43,7 @@ export default function Layout({ children }: Readonly<{ children: ReactNode }>) 
       // “cookie 存在”就把我们从 /login 又重定向回主界面，与本守卫来回弹跳
       // 形成无限重定向 → 白屏（cookie 与 localStorage 不一致时触发）。
       auth.clearToken();
-      window.location.href = "/login";
+      window.location.href = withBasePath("/login/");
     }
   }, []);
 
@@ -79,6 +81,15 @@ export default function Layout({ children }: Readonly<{ children: ReactNode }>) 
           "min-w-0 overflow-x-hidden",
         )}
       >
+        {MOCK && (
+          <div className="flex flex-wrap items-center justify-between gap-2 border-b bg-primary/5 px-4 py-2 text-xs text-muted-foreground">
+            <span><strong className="text-foreground">ARTEX 在线演示</strong> · 模拟数据，刷新后重置</span>
+            <span>
+              由 <a className="text-primary hover:underline" href="https://github.com/bookSiYi1412/ARTEX">bookSiYi1412</a> 维护
+              {" · 来源 "}<a className="text-primary hover:underline" href="https://github.com/mhtsec/ARTEX">mhtsec/ARTEX</a>
+            </span>
+          </div>
+        )}
         <MainContent>{children}</MainContent>
       </SidebarInset>
     </SidebarProvider>
