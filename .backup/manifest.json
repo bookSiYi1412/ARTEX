@@ -1,0 +1,127 @@
+{
+  "source_repository": "https://github.com/mhtsec/ARTEX",
+  "backup_repository": "https://github.com/bookSiYi1412/ARTEX",
+  "backup_owner": "bookSiYi1412",
+  "snapshot_captured_at_utc": "2026-10-12T05:39:57+00:00",
+  "source_default_branch": "main",
+  "source_head": "a9d11cb852eadad00669e4f6a05ee59cbbd14860",
+  "source_license": "AGPL-3.0",
+  "source_commit_count_all_refs": 465,
+  "source_file_count_at_head": 810,
+  "source_branch_count": 1,
+  "source_tag_count": 19,
+  "source_refs": [
+    {
+      "ref": "refs/heads/main",
+      "object": "a9d11cb852eadad00669e4f6a05ee59cbbd14860"
+    },
+    {
+      "ref": "refs/pull/4/head",
+      "object": "69ad7b0b93ef89f21d6fb632421445436a32d6af"
+    },
+    {
+      "ref": "refs/tags/v0.1.0",
+      "object": "c75a29de7ee75fcf689f0b5eb40bd7f465f7ee7b"
+    },
+    {
+      "ref": "refs/tags/v0.1.1",
+      "object": "0f94849012b32cc8b1f66f1e45ea1bdd88362a11"
+    },
+    {
+      "ref": "refs/tags/v0.2.0",
+      "object": "563c28c0ef610f7e0264e1a254782ceadfc49eb3"
+    },
+    {
+      "ref": "refs/tags/v0.3.0",
+      "object": "66caa90dfe7f32b211d20453f30ace7c57ce8227"
+    },
+    {
+      "ref": "refs/tags/v0.3.1",
+      "object": "b31c7f23f6ebb61dfc7e5a7427279fd4d3f1ffa9"
+    },
+    {
+      "ref": "refs/tags/v0.3.10",
+      "object": "ae7ec1be4f64f3ca5c96268aebec26b8f4ed0fda"
+    },
+    {
+      "ref": "refs/tags/v0.3.11",
+      "object": "b6c4c341073b143e45001089c934698cd7b485f9"
+    },
+    {
+      "ref": "refs/tags/v0.3.12",
+      "object": "0ec51e37993aa50047317b009a05593c61bbdf1e"
+    },
+    {
+      "ref": "refs/tags/v0.3.13",
+      "object": "ac54c2eb3c3c992f1c9b99ec0251ae3cafb46101"
+    },
+    {
+      "ref": "refs/tags/v0.3.14",
+      "object": "7a626b9d32a1eed41abc894484c15f41977acac0"
+    },
+    {
+      "ref": "refs/tags/v0.3.15",
+      "object": "7d8c1358cfcf73601a00e9edb39184f1eae2f715"
+    },
+    {
+      "ref": "refs/tags/v0.3.2",
+      "object": "cc371e75f3a37db7b3446d501a5fd1a3f8a1f71b"
+    },
+    {
+      "ref": "refs/tags/v0.3.3",
+      "object": "d9a3d321f9654eb9f8c8d80380cdaae7ea42dd2e"
+    },
+    {
+      "ref": "refs/tags/v0.3.4",
+      "object": "6e40f41051568a084fce89cd8f5d37d0c01a8596"
+    },
+    {
+      "ref": "refs/tags/v0.3.5",
+      "object": "f6c4cbb013db9eaf700e3a39db74492af4254e29"
+    },
+    {
+      "ref": "refs/tags/v0.3.6",
+      "object": "f3cfbafa8f9e4451de738d32ed548a4dfc9da42d"
+    },
+    {
+      "ref": "refs/tags/v0.3.7",
+      "object": "8583201717fda65d820bece0408b19ea53c12316"
+    },
+    {
+      "ref": "refs/tags/v0.3.8",
+      "object": "f36625a4adcaee531bbe17d19616592870fe0da3"
+    },
+    {
+      "ref": "refs/tags/v0.3.9",
+      "object": "873ecaeee311471ff7f13c774673f7e0923c16ab"
+    }
+  ],
+  "preserved_default_branch_ref": "refs/heads/upstream-snapshot/2026-10-12",
+  "extra_ref_mapping": {
+    "refs/pull/4/head": "refs/heads/backup/pull/4"
+  },
+  "github_public_metadata_files": [
+    "issue-comments.json",
+    "issues-and-pulls.json",
+    "pull-requests.json",
+    "releases.json",
+    "repository.json",
+    "review-comments.json"
+  ],
+  "metadata_sha256": {
+    "issue-comments.json": "37da7dd277b76762a098775c9af61ca9f390e100e9dad042cb1607bb968a01cd",
+    "issues-and-pulls.json": "052aff2458b020ecbea2a7bf327d7407f0ccab1c165fce2ade4ef817d8bd4349",
+    "pull-requests.json": "699d705eacf97cd9bb09b91aa38a969e3f2facabccd74b09cdd15d772ba7b7b7",
+    "releases.json": "2ba33ca0557f1bb5b7ba88d67f9d0093c7185a36ec51fe2b7bd9372d3e001d6d",
+    "repository.json": "488ae152c1c8a3d0762e6f1c28686bf9a845ad8b977c6ddc15ca00141cc8b07c",
+    "review-comments.json": "2ba33ca0557f1bb5b7ba88d67f9d0093c7185a36ec51fe2b7bd9372d3e001d6d"
+  },
+  "source_releases": 0,
+  "source_wiki_enabled": false,
+  "backup_changes": [
+    "README.md: prepend independent-backup attribution",
+    "BACKUP.md: add provenance and backup scope",
+    ".backup/: add source reference manifest and public metadata snapshots"
+  ],
+  "automatic_sync": false
+}

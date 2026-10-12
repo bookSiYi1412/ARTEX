@@ -1,3 +1,9 @@
+> **独立备份声明**：本仓库由 [bookSiYi1412](https://github.com/bookSiYi1412) 作为个人独立备份维护，来源于 [mhtsec/ARTEX](https://github.com/mhtsec/ARTEX)。项目源码及其贡献归原作者和贡献者所有；备份者负责本仓库的保存与来源说明。
+>
+> **备份日期**：2026-10-12；**源提交**：[`a9d11cb852ea`](https://github.com/mhtsec/ARTEX/commit/a9d11cb852eadad00669e4f6a05ee59cbbd14860)；**许可证**：[AGPL-3.0](LICENSE)。本仓库与上游独立维护，具体备份范围及原始快照见 [BACKUP.md](BACKUP.md)。
+
+---
+
 <div align="center">
 
 # ARTEX
