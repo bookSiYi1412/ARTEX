@@ -1,0 +1,35 @@
+name: Build ARTEX demo
+
+on:
+  push:
+    branches: [demo]
+    paths:
+      - "web/**"
+      - ".github/workflows/demo-build.yml"
+      - ".github/workflows/demo-pages.yml"
+
+permissions:
+  contents: read
+
+concurrency:
+  group: artex-demo-build
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: demo
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+          cache: npm
+          cache-dependency-path: web/package-lock.json
+      - name: Install locked dependencies
+        run: npm ci --ignore-scripts --no-audit --no-fund
+        working-directory: web
+      - name: Validate static demo build
+        run: npm run build:demo
+        working-directory: web
