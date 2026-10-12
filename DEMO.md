@@ -10,7 +10,7 @@
 - `main`：独立备份主分支及部署入口。
 - `upstream-snapshot/2026-10-12`：未经修改的上游快照。
 
-仓库 Settings → Pages → Build and deployment → Source 选择 **GitHub Actions**。随后推送 `demo` 的前端修改，或在 Actions 中运行 **Deploy ARTEX demo to GitHub Pages**，即可自动构建并部署。工作流固定从 `demo` 分支构建。
+仓库 Settings → Pages → Build and deployment → Source 选择 **GitHub Actions**。随后推送 `demo` 的前端修改，工作流先验证构建，成功后自动由 `main` 发起发布，兼容 Pages 环境只允许 `main` 部署的规则。也可以在 Actions 中选择 `main` 分支运行 **Deploy ARTEX demo to GitHub Pages**。发布内容始终从 `demo` 分支构建。
 
 ## 本地构建
 
