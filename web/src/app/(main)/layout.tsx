@@ -86,7 +86,6 @@ export default function Layout({ children }: Readonly<{ children: ReactNode }>) 
             <span><strong className="text-foreground">ARTEX 在线演示</strong> · 模拟数据，刷新后重置</span>
             <span>
               由 <a className="text-primary hover:underline" href="https://github.com/bookSiYi1412/ARTEX">bookSiYi1412</a> 维护
-              {" · 来源 "}<a className="text-primary hover:underline" href="https://github.com/mhtsec/ARTEX">mhtsec/ARTEX</a>
             </span>
           </div>
         )}
