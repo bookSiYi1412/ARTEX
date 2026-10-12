@@ -1,14 +1,9 @@
 name: Deploy ARTEX demo to GitHub Pages
 
 on:
-  push:
-    branches: [demo]
-    paths:
-      - "web/**"
-      - ".github/workflows/demo-pages.yml"
   workflow_dispatch:
   workflow_run:
-    workflows: ["Deploy ARTEX demo to GitHub Pages"]
+    workflows: ["Build ARTEX demo"]
     types: [completed]
     branches: [demo]
 
@@ -43,8 +38,7 @@ jobs:
           path: web/out
 
   deploy:
-    # Pages environment allows main to publish; demo pushes only validate the build.
-    # Their successful workflow_run event starts the publishing run on main.
+    # Keep publishing on main to respect the existing Pages environment rules.
     if: github.ref == 'refs/heads/main'
     needs: build
     runs-on: ubuntu-latest
